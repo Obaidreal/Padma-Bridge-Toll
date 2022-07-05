@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package padma_bridge_toll;
+
 
 /**
  *
@@ -42,19 +42,29 @@ public class Home extends javax.swing.JFrame {
         jPanel1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jPanel1.setLayout(null);
 
-        jButton1.setBackground(new java.awt.Color(63, 183, 183));
+        jButton1.setBackground(new java.awt.Color(0, 51, 51));
         jButton1.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(155, 93, 44));
+        jButton1.setForeground(new java.awt.Color(204, 204, 204));
         jButton1.setText("ADMIN");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
         jPanel1.add(jButton1);
-        jButton1.setBounds(600, 260, 160, 70);
+        jButton1.setBounds(460, 260, 160, 70);
 
-        jButton2.setBackground(new java.awt.Color(63, 183, 183));
+        jButton2.setBackground(new java.awt.Color(0, 51, 51));
         jButton2.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(155, 93, 44));
+        jButton2.setForeground(new java.awt.Color(204, 204, 204));
         jButton2.setText("EMPLOYEE");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
         jPanel1.add(jButton2);
-        jButton2.setBounds(70, 260, 200, 70);
+        jButton2.setBounds(250, 260, 170, 70);
 
         tan.setBackground(new java.awt.Color(255, 255, 255));
         tan.setForeground(new java.awt.Color(255, 255, 255));
@@ -69,12 +79,12 @@ public class Home extends javax.swing.JFrame {
         jPanel1.add(jLabel2);
         jLabel2.setBounds(310, 660, 290, 130);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/padma_bridge_toll/canva.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/canva.png"))); // NOI18N
         jPanel1.add(jLabel1);
         jLabel1.setBounds(20, 0, 850, 250);
 
         bg.setFont(new java.awt.Font("Vladimir Script", 0, 13)); // NOI18N
-        bg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/padma_bridge_toll/bghome.png"))); // NOI18N
+        bg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bghome.png"))); // NOI18N
         jPanel1.add(bg);
         bg.setBounds(0, 60, 870, 750);
 
@@ -107,6 +117,18 @@ public class Home extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        this.setVisible(false);
+        new Employee().setVisible(true);
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+      this.setVisible(false);
+        new Adlogin().setVisible(true);
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments

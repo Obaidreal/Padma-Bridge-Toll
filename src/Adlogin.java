@@ -2,18 +2,18 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package newthingis;
+
 
 /**
  *
  * @author sunio
  */
-public class ADMINlogin extends javax.swing.JFrame {
+public class Adlogin extends javax.swing.JFrame {
 
     /**
      * Creates new form NewJFrame
      */
-    public ADMINlogin() {
+    public Adlogin() {
         initComponents();
     }
 
@@ -37,7 +37,6 @@ public class ADMINlogin extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(589, 500));
         setSize(new java.awt.Dimension(700, 700));
 
         jPanel1.setBackground(new java.awt.Color(216, 218, 181));
@@ -65,8 +64,13 @@ public class ADMINlogin extends javax.swing.JFrame {
         jButton1.setBackground(new java.awt.Color(0, 102, 102));
         jButton1.setFont(new java.awt.Font("Yu Gothic UI Light", 3, 14)); // NOI18N
         jButton1.setText("BACK");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
         jPanel1.add(jButton1);
-        jButton1.setBounds(350, 310, 72, 30);
+        jButton1.setBounds(350, 310, 69, 30);
         jPanel1.add(jPasswordField1);
         jPasswordField1.setBounds(300, 260, 120, 30);
 
@@ -77,7 +81,7 @@ public class ADMINlogin extends javax.swing.JFrame {
         jButton2.setBounds(220, 310, 90, 30);
 
         jLabel1.setBackground(new java.awt.Color(211, 208, 166));
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/newthingis/Admin.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Admin.png"))); // NOI18N
         jPanel1.add(jLabel1);
         jLabel1.setBounds(40, 20, 530, 460);
 
@@ -92,12 +96,18 @@ public class ADMINlogin extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 509, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        this.setVisible(false);
+        new Home().setVisible(true);
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -116,13 +126,13 @@ public class ADMINlogin extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(ADMINlogin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Adlogin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(ADMINlogin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Adlogin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(ADMINlogin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Adlogin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(ADMINlogin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Adlogin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
         //</editor-fold>
@@ -132,7 +142,7 @@ public class ADMINlogin extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new ADMINlogin().setVisible(true);
+                new Adlogin().setVisible(true);
             }
         });
     }
