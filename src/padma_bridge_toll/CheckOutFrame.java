@@ -34,22 +34,10 @@ public class CheckOutFrame extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
         jLabel10 = new javax.swing.JLabel();
         jTextField2 = new javax.swing.JTextField();
-        jLabel11 = new javax.swing.JLabel();
-        jTextField3 = new javax.swing.JTextField();
-        jLabel12 = new javax.swing.JLabel();
-        jLabel13 = new javax.swing.JLabel();
-        jLabel14 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
-        jLabel16 = new javax.swing.JLabel();
-        jTextField4 = new javax.swing.JTextField();
-        jTextField5 = new javax.swing.JTextField();
-        jTextField6 = new javax.swing.JTextField();
         jTextField7 = new javax.swing.JTextField();
-        jTextField8 = new javax.swing.JTextField();
         jLabel17 = new javax.swing.JLabel();
         jLabel18 = new javax.swing.JLabel();
 
@@ -59,7 +47,7 @@ public class CheckOutFrame extends javax.swing.JFrame {
 
         jPanel1.setLayout(null);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/output-onlinepngtools.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/padma_bridge_toll/output-onlinepngtools.png"))); // NOI18N
         jPanel1.add(jLabel1);
         jLabel1.setBounds(0, 60, 550, 230);
 
@@ -89,23 +77,10 @@ public class CheckOutFrame extends javax.swing.JFrame {
         jPanel1.add(jLabel8);
         jLabel8.setBounds(190, 100, 158, 25);
 
-        jLabel9.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
-        jLabel9.setText("Transaction No.     :");
-        jPanel1.add(jLabel9);
-        jLabel9.setBounds(40, 300, 140, 16);
-
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jTextField1);
-        jTextField1.setBounds(190, 300, 210, 30);
-
-        jLabel10.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
-        jLabel10.setText("Date                        :");
+        jLabel10.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        jLabel10.setText("Date  :");
         jPanel1.add(jLabel10);
-        jLabel10.setBounds(40, 340, 140, 22);
+        jLabel10.setBounds(60, 340, 60, 30);
 
         jTextField2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -115,53 +90,12 @@ public class CheckOutFrame extends javax.swing.JFrame {
         jPanel1.add(jTextField2);
         jTextField2.setBounds(190, 340, 210, 30);
 
-        jLabel11.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
-        jLabel11.setText("Time                        :");
-        jPanel1.add(jLabel11);
-        jLabel11.setBounds(40, 380, 140, 16);
-        jPanel1.add(jTextField3);
-        jTextField3.setBounds(190, 380, 210, 30);
-
-        jLabel12.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
-        jLabel12.setText("Lane No.                 :");
-        jPanel1.add(jLabel12);
-        jLabel12.setBounds(40, 420, 140, 22);
-
-        jLabel13.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
-        jLabel13.setText("Shift                        :");
-        jPanel1.add(jLabel13);
-        jLabel13.setBounds(40, 460, 140, 20);
-
-        jLabel14.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
-        jLabel14.setText("Lane No.                 :");
-        jPanel1.add(jLabel14);
-        jLabel14.setBounds(40, 500, 140, 22);
-
-        jLabel15.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
-        jLabel15.setText("Fee                          :");
+        jLabel15.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        jLabel15.setText(" Collected Amount :");
         jPanel1.add(jLabel15);
-        jLabel15.setBounds(40, 540, 140, 22);
-
-        jLabel16.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
-        jLabel16.setText("Payment Method  :");
-        jPanel1.add(jLabel16);
-        jLabel16.setBounds(40, 580, 130, 22);
-
-        jTextField4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField4ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jTextField4);
-        jTextField4.setBounds(190, 420, 210, 30);
-        jPanel1.add(jTextField5);
-        jTextField5.setBounds(190, 460, 210, 30);
-        jPanel1.add(jTextField6);
-        jTextField6.setBounds(190, 500, 210, 30);
+        jLabel15.setBounds(20, 390, 160, 30);
         jPanel1.add(jTextField7);
-        jTextField7.setBounds(190, 540, 210, 30);
-        jPanel1.add(jTextField8);
-        jTextField8.setBounds(190, 580, 210, 30);
+        jTextField7.setBounds(190, 390, 210, 30);
 
         jLabel17.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         jLabel17.setText("HAVE A SAFE JOURNEY");
@@ -189,17 +123,9 @@ public class CheckOutFrame extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
-
     private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField2ActionPerformed
-
-    private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField4ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -239,12 +165,7 @@ public class CheckOutFrame extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel2;
@@ -253,15 +174,8 @@ public class CheckOutFrame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
     private javax.swing.JTextField jTextField7;
-    private javax.swing.JTextField jTextField8;
     // End of variables declaration//GEN-END:variables
 }

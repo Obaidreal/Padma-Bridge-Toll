@@ -8,12 +8,12 @@
  *
  * @author H4ck3R
  */
-public class NewJFrame extends javax.swing.JFrame {
+public class Admin_Check extends javax.swing.JFrame {
 
     /**
      * Creates new form NewJFrame
      */
-    public NewJFrame() {
+    public Admin_Check() {
         initComponents();
     }
 
@@ -65,9 +65,9 @@ public class NewJFrame extends javax.swing.JFrame {
 
         jPanel1.setLayout(null);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/output-onlinepngtools.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/padma_bridge_toll/output-onlinepngtools.png"))); // NOI18N
         jPanel1.add(jLabel1);
-        jLabel1.setBounds(0, 60, 550, 230);
+        jLabel1.setBounds(0, -130, 510, 600);
 
         jLabel3.setFont(new java.awt.Font("Segoe UI Emoji", 0, 17)); // NOI18N
         jLabel3.setText("PADMA BRIDGE TOLL COPY");
@@ -166,6 +166,8 @@ public class NewJFrame extends javax.swing.JFrame {
         jTextField6.setBounds(190, 500, 210, 30);
         jPanel1.add(jTextField7);
         jTextField7.setBounds(190, 540, 210, 30);
+
+        jTextField8.setText("On Cash");
         jPanel1.add(jTextField8);
         jTextField8.setBounds(190, 580, 210, 30);
 
@@ -224,20 +226,20 @@ public class NewJFrame extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(NewJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Admin_Check.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(NewJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Admin_Check.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(NewJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Admin_Check.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(NewJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Admin_Check.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new NewJFrame().setVisible(true);
+                new Admin_Check().setVisible(true);
             }
         });
     }
