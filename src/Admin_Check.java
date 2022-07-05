@@ -67,7 +67,7 @@ public class Admin_Check extends javax.swing.JFrame {
 
         jPanel1.setLayout(null);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/padma_bridge_toll/output-onlinepngtools.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/output-onlinepngtools.png"))); // NOI18N
         jPanel1.add(jLabel1);
         jLabel1.setBounds(0, -130, 510, 600);
 

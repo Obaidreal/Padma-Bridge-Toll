@@ -39,7 +39,6 @@ public class choose_vehicles extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         SHAPE = new javax.swing.JLabel();
         cz = new javax.swing.JLabel();
-        bg = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -69,7 +68,7 @@ public class choose_vehicles extends javax.swing.JFrame {
         jButton4.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         jButton4.setText("Microbus");
         jPanel1.add(jButton4);
-        jButton4.setBounds(590, 230, 120, 80);
+        jButton4.setBounds(590, 230, 150, 80);
 
         jButton5.setBackground(new java.awt.Color(255, 255, 255));
         jButton5.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
@@ -97,7 +96,7 @@ public class choose_vehicles extends javax.swing.JFrame {
 
         SHAPE.setBackground(new java.awt.Color(204, 0, 204));
         SHAPE.setForeground(new java.awt.Color(255, 0, 0));
-        SHAPE.setIcon(new javax.swing.ImageIcon(getClass().getResource("/padma_bridge_toll/box.jpg"))); // NOI18N
+        SHAPE.setIcon(new javax.swing.ImageIcon(getClass().getResource("/box.jpg"))); // NOI18N
         SHAPE.setText("jLabel1");
         jPanel1.add(SHAPE);
         SHAPE.setBounds(70, 120, 750, 480);
@@ -108,11 +107,6 @@ public class choose_vehicles extends javax.swing.JFrame {
         cz.setText("CHOOSE VEHICLE");
         jPanel1.add(cz);
         cz.setBounds(250, 30, 370, 110);
-
-        bg.setFont(new java.awt.Font("Vladimir Script", 0, 13)); // NOI18N
-        bg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/padma_bridge_toll/bghome.png"))); // NOI18N
-        jPanel1.add(bg);
-        bg.setBounds(0, 60, 870, 750);
 
         jPanel2.setBackground(new java.awt.Color(105, 195, 192));
 
@@ -181,7 +175,6 @@ public class choose_vehicles extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel SHAPE;
-    private javax.swing.JLabel bg;
     private javax.swing.JLabel cz;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;

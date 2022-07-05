@@ -1,3 +1,11 @@
+
+import java.awt.Component;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import javax.swing.JOptionPane;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
@@ -9,6 +17,7 @@
  * @author sunio
  */
 public class Employee extends javax.swing.JFrame {
+    private Component frame;
 
     /**
      * Creates new form Employee
@@ -124,7 +133,35 @@ public class Employee extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField1ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        
+String Username=jTextField1.getText();
+           String Password=String.valueOf(jPasswordField1.getPassword());
+          
+           String passwordindb="";
+           String idindb="";
+           
+           try {
+            Connection connection =DriverManager.getConnection("jdbc:mysql://localhost:3306/bridgetolldb","root", "root");
+        Statement stmnt=connection.createStatement();
+           ResultSet rs=stmnt.executeQuery("SELECT * FROM bridgetolldb.emplogin where id='"+Username+"'");
+           if(rs.next()){
+                passwordindb = rs.getString("pass");
+                idindb= rs.getString("id");
+            }
+        } catch (Exception e)
+        { e.printStackTrace();
+        }
+        if (passwordindb!="" &&idindb!=""&& Username.equals(idindb) && Password.equals(passwordindb))
+        {
+            this.setVisible(false);
+            new Admin_Check().setVisible(true);
+        }
+        else {
+            JOptionPane.showMessageDialog(frame,
+    "Wrong Password",
+    "Alert",
+    JOptionPane.ERROR_MESSAGE);
+            //jLabel6.setText("Please Try Again!!!");
+        }        
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
 
