@@ -186,7 +186,7 @@ public class choose_vehicles extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         String v1="MOTORCYCLE";
-        int ammount,ammount2;
+        int ammount,ammount2,ammount3;
         String currency="cc",availabletk="tk";
          try {
         Connection connection =DriverManager.getConnection("jdbc:mysql://localhost:3306/bridgetolldb","root", "root");
@@ -211,17 +211,17 @@ public class choose_vehicles extends javax.swing.JFrame {
                Statement stmnt4=connection.createStatement();
                ResultSet rs3=stmnt4.executeQuery("SELECT * FROM bridgetolldb.totalcash where currencyname='"+availabletk+"'");
                if(rs3.next()) {
-               ammount2 =Integer.parseInt(rs3.getString("cash"));
-               ammount2=ammount2+ammount;
+               ammount3 =Integer.parseInt(rs3.getString("cash"));
+               ammount2=ammount2+ammount3;
                
                Statement stmnt5=connection.createStatement();
                String query3="UPDATE bridgetolldb.totalcash SET cash = '"+ammount2+"' WHERE currencyname='"+currency+"'";
-               stmnt2.executeUpdate(query3);
+               stmnt5.executeUpdate(query3);
                }
            }
            }
            this.setVisible(false);
-               new Admin_Check().setVisible(true);
+               new Emp_Checkout().setVisible(true);
     }
     catch (Exception e)
     {
@@ -233,7 +233,7 @@ public class choose_vehicles extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         String v1="CAR/JEEP";
-        int ammount,ammount2;
+        int ammount,ammount2,ammount3;
         String currency="cc",availabletk="tk";
          try {
         Connection connection =DriverManager.getConnection("jdbc:mysql://localhost:3306/bridgetolldb","root", "root");
@@ -258,17 +258,17 @@ public class choose_vehicles extends javax.swing.JFrame {
                Statement stmnt4=connection.createStatement();
                ResultSet rs3=stmnt4.executeQuery("SELECT * FROM bridgetolldb.totalcash where currencyname='"+availabletk+"'");
                if(rs3.next()) {
-               ammount2 =Integer.parseInt(rs3.getString("cash"));
-               ammount2=ammount2+ammount;
+               ammount3 =Integer.parseInt(rs3.getString("cash"));
+               ammount2=ammount2+ammount3;
                
                Statement stmnt5=connection.createStatement();
                String query3="UPDATE bridgetolldb.totalcash SET cash = '"+ammount2+"' WHERE currencyname='"+currency+"'";
-               stmnt2.executeUpdate(query3);
+               stmnt5.executeUpdate(query3);
                }
            }
            }
            this.setVisible(false);
-               new Admin_Check().setVisible(true);
+               new Emp_Checkout().setVisible(true);
     }
     catch (Exception e)
     {
@@ -279,7 +279,7 @@ public class choose_vehicles extends javax.swing.JFrame {
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
 String v1="PICKUP VAN";
-        int ammount,ammount2;
+        int ammount,ammount2,ammount3;
         String currency="cc",availabletk="tk";
          try {
         Connection connection =DriverManager.getConnection("jdbc:mysql://localhost:3306/bridgetolldb","root", "root");
@@ -304,17 +304,18 @@ String v1="PICKUP VAN";
                Statement stmnt4=connection.createStatement();
                ResultSet rs3=stmnt4.executeQuery("SELECT * FROM bridgetolldb.totalcash where currencyname='"+availabletk+"'");
                if(rs3.next()) {
-               ammount2 =Integer.parseInt(rs3.getString("cash"));
-               ammount2=ammount2+ammount;
+               ammount3 =Integer.parseInt(rs3.getString("cash"));
+               ammount2=ammount2+ammount3;
                
                Statement stmnt5=connection.createStatement();
                String query3="UPDATE bridgetolldb.totalcash SET cash = '"+ammount2+"' WHERE currencyname='"+currency+"'";
-               stmnt2.executeUpdate(query3);
+               stmnt5.executeUpdate(query3);
                }
            }
+           
            }
            this.setVisible(false);
-               new Admin_Check().setVisible(true);
+               new Emp_Checkout().setVisible(true);
     }
     catch (Exception e)
     {
@@ -325,7 +326,7 @@ String v1="PICKUP VAN";
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         String v1="MICRO BUS";
-        int ammount,ammount2;
+        int ammount,ammount2,ammount3;
         String currency="cc",availabletk="tk";
          try {
         Connection connection =DriverManager.getConnection("jdbc:mysql://localhost:3306/bridgetolldb","root", "root");
@@ -350,17 +351,17 @@ String v1="PICKUP VAN";
                Statement stmnt4=connection.createStatement();
                ResultSet rs3=stmnt4.executeQuery("SELECT * FROM bridgetolldb.totalcash where currencyname='"+availabletk+"'");
                if(rs3.next()) {
-               ammount2 =Integer.parseInt(rs3.getString("cash"));
-               ammount2=ammount2+ammount;
+               ammount3 =Integer.parseInt(rs3.getString("cash"));
+               ammount2=ammount2+ammount3;
                
                Statement stmnt5=connection.createStatement();
                String query3="UPDATE bridgetolldb.totalcash SET cash = '"+ammount2+"' WHERE currencyname='"+currency+"'";
-               stmnt2.executeUpdate(query3);
+               stmnt5.executeUpdate(query3);
                }
            }
            }
            this.setVisible(false);
-               new Admin_Check().setVisible(true);
+               new Emp_Checkout().setVisible(true);
     }
     catch (Exception e)
     {
@@ -371,7 +372,7 @@ String v1="PICKUP VAN";
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         String v1="MEDIUM BUS";
-        int ammount,ammount2;
+        int ammount,ammount2,ammount3;
         String currency="cc",availabletk="tk";
          try {
         Connection connection =DriverManager.getConnection("jdbc:mysql://localhost:3306/bridgetolldb","root", "root");
@@ -396,17 +397,17 @@ String v1="PICKUP VAN";
                Statement stmnt4=connection.createStatement();
                ResultSet rs3=stmnt4.executeQuery("SELECT * FROM bridgetolldb.totalcash where currencyname='"+availabletk+"'");
                if(rs3.next()) {
-               ammount2 =Integer.parseInt(rs3.getString("cash"));
-               ammount2=ammount2+ammount;
+               ammount3 =Integer.parseInt(rs3.getString("cash"));
+               ammount2=ammount2+ammount3;
                
                Statement stmnt5=connection.createStatement();
                String query3="UPDATE bridgetolldb.totalcash SET cash = '"+ammount2+"' WHERE currencyname='"+currency+"'";
-               stmnt2.executeUpdate(query3);
+               stmnt5.executeUpdate(query3);
                }
            }
            }
            this.setVisible(false);
-               new Admin_Check().setVisible(true);
+               new Emp_Checkout().setVisible(true);
     }
     catch (Exception e)
     {
@@ -417,7 +418,7 @@ String v1="PICKUP VAN";
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         String v1="BIG BUS";
-        int ammount,ammount2;
+        int ammount,ammount2,ammount3;
         String currency="cc",availabletk="tk";
          try {
         Connection connection =DriverManager.getConnection("jdbc:mysql://localhost:3306/bridgetolldb","root", "root");
@@ -442,17 +443,17 @@ String v1="PICKUP VAN";
                Statement stmnt4=connection.createStatement();
                ResultSet rs3=stmnt4.executeQuery("SELECT * FROM bridgetolldb.totalcash where currencyname='"+availabletk+"'");
                if(rs3.next()) {
-               ammount2 =Integer.parseInt(rs3.getString("cash"));
-               ammount2=ammount2+ammount;
+               ammount3 =Integer.parseInt(rs3.getString("cash"));
+               ammount2=ammount2+ammount3;
                
                Statement stmnt5=connection.createStatement();
                String query3="UPDATE bridgetolldb.totalcash SET cash = '"+ammount2+"' WHERE currencyname='"+currency+"'";
-               stmnt2.executeUpdate(query3);
+               stmnt5.executeUpdate(query3);
                }
            }
            }
            this.setVisible(false);
-               new Admin_Check().setVisible(true);
+               new Emp_Checkout().setVisible(true);
     }
     catch (Exception e)
     {
@@ -463,7 +464,7 @@ String v1="PICKUP VAN";
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
         String v1="SMALL TRUCK";
-        int ammount,ammount2;
+       int ammount,ammount2,ammount3;
         String currency="cc",availabletk="tk";
          try {
         Connection connection =DriverManager.getConnection("jdbc:mysql://localhost:3306/bridgetolldb","root", "root");
@@ -488,17 +489,17 @@ String v1="PICKUP VAN";
                Statement stmnt4=connection.createStatement();
                ResultSet rs3=stmnt4.executeQuery("SELECT * FROM bridgetolldb.totalcash where currencyname='"+availabletk+"'");
                if(rs3.next()) {
-               ammount2 =Integer.parseInt(rs3.getString("cash"));
-               ammount2=ammount2+ammount;
+               ammount3 =Integer.parseInt(rs3.getString("cash"));
+               ammount2=ammount2+ammount3;
                
                Statement stmnt5=connection.createStatement();
                String query3="UPDATE bridgetolldb.totalcash SET cash = '"+ammount2+"' WHERE currencyname='"+currency+"'";
-               stmnt2.executeUpdate(query3);
+               stmnt5.executeUpdate(query3);
                }
            }
            }
            this.setVisible(false);
-               new Admin_Check().setVisible(true);
+               new Emp_Checkout().setVisible(true);
     }
     catch (Exception e)
     {
@@ -509,7 +510,7 @@ String v1="PICKUP VAN";
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
         String v1="MEDIUM TRUCK";
-        int ammount,ammount2;
+        int ammount,ammount2,ammount3;
         String currency="cc",availabletk="tk";
          try {
         Connection connection =DriverManager.getConnection("jdbc:mysql://localhost:3306/bridgetolldb","root", "root");
@@ -534,17 +535,17 @@ String v1="PICKUP VAN";
                Statement stmnt4=connection.createStatement();
                ResultSet rs3=stmnt4.executeQuery("SELECT * FROM bridgetolldb.totalcash where currencyname='"+availabletk+"'");
                if(rs3.next()) {
-               ammount2 =Integer.parseInt(rs3.getString("cash"));
-               ammount2=ammount2+ammount;
+               ammount3 =Integer.parseInt(rs3.getString("cash"));
+               ammount2=ammount2+ammount3;
                
                Statement stmnt5=connection.createStatement();
                String query3="UPDATE bridgetolldb.totalcash SET cash = '"+ammount2+"' WHERE currencyname='"+currency+"'";
-               stmnt2.executeUpdate(query3);
+               stmnt5.executeUpdate(query3);
                }
            }
            }
            this.setVisible(false);
-               new Admin_Check().setVisible(true);
+               new Emp_Checkout().setVisible(true);
     }
     catch (Exception e)
     {

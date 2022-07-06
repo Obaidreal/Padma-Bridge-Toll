@@ -144,7 +144,7 @@ public class Adlogin extends javax.swing.JFrame {
         if (passwordindb!="" &&idindb!=""&& Username.equals(idindb) && Password.equals(passwordindb))
         {
             this.setVisible(false);
-            new CheckOutFrame().setVisible(true);
+            new Admin_Checker().setVisible(true);
         }
         else {
             JOptionPane.showMessageDialog(frame2,

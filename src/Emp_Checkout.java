@@ -19,12 +19,12 @@ import java.util.logging.Logger;
  *
  * @author H4ck3R
  */
-public class Admin_Check extends javax.swing.JFrame {
+public class Emp_Checkout extends javax.swing.JFrame {
 
     /**
      * Creates new form NewJFrame
      */
-    public Admin_Check() {
+    public Emp_Checkout() {
         initComponents();
         feeupdate();
     }

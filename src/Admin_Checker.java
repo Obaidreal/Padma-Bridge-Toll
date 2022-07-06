@@ -17,13 +17,13 @@ import java.util.Locale;
  *
  * @author H4ck3R
  */
-public final class CheckOutFrame extends javax.swing.JFrame {
+public final class Admin_Checker extends javax.swing.JFrame {
     
 
     /**
      * Creates new form CheckOutFrame
      */
-    public CheckOutFrame() {
+    public Admin_Checker() {
        
         initComponents();
         dt();
@@ -31,6 +31,7 @@ public final class CheckOutFrame extends javax.swing.JFrame {
         
     }
     public void ammount() {
+        
         
     }
     public void dt()
@@ -181,13 +182,13 @@ public final class CheckOutFrame extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(CheckOutFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Admin_Checker.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(CheckOutFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Admin_Checker.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(CheckOutFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Admin_Checker.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(CheckOutFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Admin_Checker.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
@@ -195,7 +196,7 @@ public final class CheckOutFrame extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 
-                new CheckOutFrame().setVisible(true);
+                new Admin_Checker().setVisible(true);
             }
         });
     }
