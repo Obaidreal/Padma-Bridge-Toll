@@ -1,4 +1,13 @@
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -17,6 +26,21 @@ public class Admin_Check extends javax.swing.JFrame {
      */
     public Admin_Check() {
         initComponents();
+        feeupdate();
+    }
+    public void feeupdate() {
+        try {
+            String v1="tk";
+            Connection connection =DriverManager.getConnection("jdbc:mysql://localhost:3306/bridgetolldb","root", "root");
+            Statement stmnt=connection.createStatement();
+            ResultSet rs=stmnt.executeQuery("SELECT * FROM bridgetolldb.totalcash where currencyname='"+v1+"'");
+            if(rs.next()) {
+            String s=rs.getString("cash");
+            fee.setText(s);
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(Admin_Check.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     /**
@@ -51,7 +75,7 @@ public class Admin_Check extends javax.swing.JFrame {
         jTextField4 = new javax.swing.JTextField();
         jTextField5 = new javax.swing.JTextField();
         jTextField6 = new javax.swing.JTextField();
-        jTextField7 = new javax.swing.JTextField();
+        fee = new javax.swing.JTextField();
         jTextField8 = new javax.swing.JTextField();
         jLabel17 = new javax.swing.JLabel();
         jLabel18 = new javax.swing.JLabel();
@@ -166,8 +190,8 @@ public class Admin_Check extends javax.swing.JFrame {
         jTextField5.setBounds(190, 460, 210, 30);
         jPanel1.add(jTextField6);
         jTextField6.setBounds(190, 500, 210, 30);
-        jPanel1.add(jTextField7);
-        jTextField7.setBounds(190, 540, 210, 30);
+        jPanel1.add(fee);
+        fee.setBounds(190, 540, 210, 30);
 
         jTextField8.setText("On Cash");
         jPanel1.add(jTextField8);
@@ -247,6 +271,7 @@ public class Admin_Check extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField fee;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -272,7 +297,6 @@ public class Admin_Check extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField5;
     private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField7;
     private javax.swing.JTextField jTextField8;
     // End of variables declaration//GEN-END:variables
 }

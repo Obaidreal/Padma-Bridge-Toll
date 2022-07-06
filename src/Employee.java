@@ -153,11 +153,11 @@ String Username=jTextField1.getText();
         if (passwordindb!="" &&idindb!=""&& Username.equals(idindb) && Password.equals(passwordindb))
         {
             this.setVisible(false);
-            new Admin_Check().setVisible(true);
+            new choose_vehicles().setVisible(true);
         }
         else {
             JOptionPane.showMessageDialog(frame,
-    "Wrong Password",
+    "Wrong ID or Password",
     "Alert",
     JOptionPane.ERROR_MESSAGE);
             //jLabel6.setText("Please Try Again!!!");

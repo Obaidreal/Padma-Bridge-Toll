@@ -144,11 +144,11 @@ public class Adlogin extends javax.swing.JFrame {
         if (passwordindb!="" &&idindb!=""&& Username.equals(idindb) && Password.equals(passwordindb))
         {
             this.setVisible(false);
-            new choose_vehicles().setVisible(true);
+            new CheckOutFrame().setVisible(true);
         }
         else {
             JOptionPane.showMessageDialog(frame2,
-    "Wrong Password",
+    "Wrong ID or Password",
     "Alert",
     JOptionPane.ERROR_MESSAGE);
             //jLabel6.setText("Please Try Again!!!");

@@ -1,3 +1,12 @@
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -8,13 +17,28 @@
  *
  * @author H4ck3R
  */
-public class CheckOutFrame extends javax.swing.JFrame {
+public final class CheckOutFrame extends javax.swing.JFrame {
+    
 
     /**
      * Creates new form CheckOutFrame
      */
     public CheckOutFrame() {
+       
         initComponents();
+        dt();
+        ammount ();
+        
+    }
+    public void ammount() {
+        
+    }
+    public void dt()
+    {
+        Date date = new Date();
+        SimpleDateFormat DateFor = new SimpleDateFormat("dd/MM/yyyy");
+        String stringDate= DateFor.format(date);
+        datef.setText(stringDate);
     }
 
     /**
@@ -35,9 +59,9 @@ public class CheckOutFrame extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
+        datef = new javax.swing.JTextField();
         jLabel15 = new javax.swing.JLabel();
-        jTextField7 = new javax.swing.JTextField();
+        cash = new javax.swing.JTextField();
         jLabel17 = new javax.swing.JLabel();
         jLabel18 = new javax.swing.JLabel();
 
@@ -47,7 +71,7 @@ public class CheckOutFrame extends javax.swing.JFrame {
 
         jPanel1.setLayout(null);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/padma_bridge_toll/output-onlinepngtools.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/output-onlinepngtools.png"))); // NOI18N
         jPanel1.add(jLabel1);
         jLabel1.setBounds(0, 60, 550, 230);
 
@@ -82,20 +106,28 @@ public class CheckOutFrame extends javax.swing.JFrame {
         jPanel1.add(jLabel10);
         jLabel10.setBounds(60, 340, 60, 30);
 
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+        datef.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        datef.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
+                datefActionPerformed(evt);
             }
         });
-        jPanel1.add(jTextField2);
-        jTextField2.setBounds(190, 340, 210, 30);
+        jPanel1.add(datef);
+        datef.setBounds(190, 340, 210, 30);
 
         jLabel15.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         jLabel15.setText(" Collected Amount :");
         jPanel1.add(jLabel15);
         jLabel15.setBounds(20, 390, 160, 30);
-        jPanel1.add(jTextField7);
-        jTextField7.setBounds(190, 390, 210, 30);
+
+        cash.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        cash.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cashActionPerformed(evt);
+            }
+        });
+        jPanel1.add(cash);
+        cash.setBounds(190, 390, 210, 30);
 
         jLabel17.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         jLabel17.setText("HAVE A SAFE JOURNEY");
@@ -123,9 +155,14 @@ public class CheckOutFrame extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+    private void datefActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_datefActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
+        //datef.setText("date");
+    }//GEN-LAST:event_datefActionPerformed
+
+    private void cashActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cashActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cashActionPerformed
 
     /**
      * @param args the command line arguments
@@ -157,12 +194,15 @@ public class CheckOutFrame extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
+                
                 new CheckOutFrame().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField cash;
+    private javax.swing.JTextField datef;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel15;
@@ -175,7 +215,10 @@ public class CheckOutFrame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField7;
     // End of variables declaration//GEN-END:variables
+
+   
+
+
+    
 }
